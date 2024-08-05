@@ -76,14 +76,14 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'myproject.wsgi.application'
 
-CSRF_TRUSTED_ORIGINS = [
-     'https://sakhyam-v1-production.up.railway.app',
-]
+# CSRF_TRUSTED_ORIGINS = [
+#      'https://sakhyam-v1-production.up.railway.app',
+# ]
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.parse('postgresql://postgres:TjJXtzXUzOUAUKXeYybvVKhKjSNPaQNC@monorail.proxy.rlwy.net:48083/railway')
+    'default': dj_database_url.parse('postgresql://postgres:oWFEUIUDUcSuHxLPzzTkEujbZrncomdI@viaduct.proxy.rlwy.net:23231/railway')
 }
 
 
