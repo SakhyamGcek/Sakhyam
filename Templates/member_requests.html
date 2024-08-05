@@ -1,0 +1,27 @@
+<h2>Member Requests</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone Number</th>
+        <th>Photo</th>
+        <th>Bio</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for member in members %}
+      <tr>
+        <td>{{ member.name }}</td>
+        <td>{{ member.email }}</td>
+        <td>{{ member.phone }}</td>
+        <td><img src="{{ member.photo.url }}" alt="Photo" width="100"></td>
+        <td>{{ member.bio }}</td>
+        <td>
+          <a href="{% url 'member:approve_member' member.id %}">Approve</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>

@@ -1,0 +1,199 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin-right: auto;
+}
+
+body, html {
+    /*height: 100%;*/
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    
+}
+
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: transparent;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    overflow: hidden;
+    border-radius: 15px;
+    width: 100%;
+}
+
+nav ul li {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: wheat;
+    font-size: 20px;
+    transition: color 0.3s;
+    border-radius: 15px;
+    padding: 5px 30px;
+    display: inline-block;
+    border: 2px;
+    background-color: gray
+}
+
+nav ul li a:hover {
+    color: goldenrod;
+}
+
+.background {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url('../images/sakhyam image.jpg') no-repeat center center/cover;
+    z-index: -1;
+}
+
+main {
+    /*margin-top: 100px; /*Adjust this value to the height of your header*/
+   /* padding: 20px;*/
+   /* height: 100vh;*/
+}
+
+section {
+    margin: 20px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+}
+
+form input, form textarea, form button {
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+form button {
+    margin-top: 15px;
+    background: #007BFF;
+    color: white;
+    border: #0056b3;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #0056b3;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: url('../image/footorgradient.jpg');
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+footer p{
+    color: gold;
+    font-size: 1.5em;
+}
+.center-content {
+    align-content: center;
+    text-align: center;
+}
+#home h1 {
+    font-size: 3.5em; /* Adjust the value as needed */
+}
+.custom-font{
+    font-family: "Sevillana", cursive;
+    font-weight: 400;
+    font-style: normal;
+    
+  }
+  
+ 
+.word1 {
+    color: royalblue;
+    font-size: 1.5em;
+}
+
+.word2 {
+    color: palevioletred;
+    font-size: 1.5em;
+}
+
+.word3 {
+    color: yellowgreen;
+    font-size: 1.5em;
+}
+
+.word4 {
+    color: goldenrod;
+    font-size: 1.5em;
+}
+.justified-text {
+    text-align: justify;
+    margin: 40px;
+    
+  }
+  .spaced-paragraph {
+    margin-bottom: 20px; /* Adjust the value as needed */
+  }
+  .radiant-background {
+    background: url('../image/Gradient.jpg') no-repeat center center/cover;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    color: black;
+}
+.underline {
+    width: 40%;
+    height: 8px; /* Adjust thickness */
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(168,50,50,1) 100%);
+    margin-left: 31%;
+}
+.centered-text{
+    text-align: center;
+    line-height: 1.6em; /* Adjust the line height as needed */
+    
+    margin: 40px;
+    font-size: 1.4em; 
+}
+.custom-font2{ 
+    font-family: "Berkshire Swash", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.4em;
+    line-height: 40px;
+}
+.custom-font3{
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 1.8em;
+}
+.sanskrit-text{
+    font-size: 1.3em;
+    margin-top: 4%;
+}

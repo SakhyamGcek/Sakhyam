@@ -1,0 +1,115 @@
+{% load static %}
+<!DOCTYPE html> 
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/styles1.css' %}">
+</head>
+<body>
+    <h1>Admin Dashboard</h1>
+
+    <h2>Pending Users</h2>
+    <ul>
+        {% for user in pending_users %}
+            <li>{{ user.email }} - <a href="{% url 'accounts:approve_user' user.id %}">Approve</a> | <a href="{% url 'accounts:disapprove_user' user.id %}">Disapprove</a></li>
+        {% empty %}
+            <li>No pending users.</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Approved Users (Password Set)</h2>
+    <ul>
+        {% for user in approved_users_with_password %}
+            <li>{{ user.email }} - <a href="{% url 'accounts:delete_user' user.id %}">Delete</a></li>
+        {% empty %}
+            <li>No approved users with password set.</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Approved Users (Password Not Set)</h2>
+    <ul>
+        {% for user in approved_users_without_password %}
+            <li>{{ user.email }} - <a href="{% url 'accounts:delete_user' user.id %}">Delete</a></li>
+        {% empty %}
+            <li>No approved users without password set.</li>
+        {% endfor %}
+    </ul>
+    <button onclick="window.location.href='{% url 'accounts:logout' %}'">Logout</button> 
+    <button onclick="window.location.href='{% url 'events:event_create' %}'">Add Event</button> 
+    {% comment %} <h2>Gallery Operations</h2>
+    <ul>
+        <li><a href="{% url 'accounts:gallery_home' %}">View Gallery</a></li>
+        <li><a href="{% url 'accounts:upload_photo' %}">Upload Photo</a></li>
+        <li><a href="{% url 'accounts:create_category' %}">Create Category</a></li>
+    </ul>
+
+    <h2>Manage Categories</h2>
+    <ul>
+        {% for category in categories %}
+            <li>{{ category.name }} - <a href="{% url 'delete_category' category.id %}">Delete</a></li>
+        {% empty %}
+            <li>No categories available.</li>
+        {% endfor %}
+    </ul> {% endcomment %}
+    <h2>Member Requests</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone Number</th>
+        <th>Photo</th>
+        <th>Bio</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <ul>
+        {% for member in members %}
+        <li>
+            <img src="{{ member.photo.url }}" alt="{{ member.name }}">
+            <h2>{{ member.name }}</h2>
+            <p>Email: {{ member.email }}</p>
+            <p>Phone: {{ member.phone }}</p>
+            <p>Bio: {{ member.bio }}</p>
+            
+            <a href="{% url 'member:approve_member' member.id %}">Approve</a>
+            <a href="{% url 'member:delete_member' member.id %}">Delete</a>
+            
+        </li>
+        {% endfor %}
+    </ul>
+    </tbody>
+  </table>
+  <h2>Members</h2>
+  <ul>
+    {% for member in approved_members  %}
+    <li>
+        <img src="{{ member.photo.url }}" alt="{{ member.name }}">
+        <h2>{{ member.name }}</h2>
+        <p>Email: {{ member.email }}</p>
+        <p>Phone: {{ member.phone }}</p>
+        <p>Bio: {{ member.bio }}</p>
+        
+        <a href="{% url 'member:assign_role' member.id %}">Role</a>
+        <a href="{% url 'member:delete_member' member.id %}">Delete</a>
+    </li>
+    {% endfor %}
+    {% for member in roles  %}
+    <li>
+        <img src="{{ member.photo.url }}" alt="{{ member.name }}">
+        <h2>{{ member.member }}</h2>
+        <p>Role: {{ member.role }}</p>
+        {% comment %} <p>Phone: {{ member.phone }}</p>
+        <p>Bio: {{ member.bio }}</p>
+         {% endcomment %}
+        {% comment %} <a href="{% url 'member:assign_role' member.id %}">Role</a>
+        <a href="{% url 'member:delete_member' member.id %}">Delete</a> {% endcomment %}
+    </li>
+    {% endfor %}
+</ul>
+</ul>
+
+</body>
+</html>

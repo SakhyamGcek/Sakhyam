@@ -1,0 +1,7 @@
+
+  <h2>{% if role_form.instance.pk %}Update Role{% else %}Assign Role{% endif %} for {{ member.name }}</h2>
+  <form method="post" action="{% url 'member:assign_role' member.id %}">
+    {% csrf_token %}
+    {{ role_form.as_p }}
+    <button type="submit">{% if role_form.instance.pk %}Update{% else %}Assign{% endif %}</button>
+  </form>

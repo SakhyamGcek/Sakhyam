@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type='text/css'>
+        body, html {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            color: black;
+            display: table;
+            font-family: Georgia, serif;
+            font-size: 24px;
+            text-align: center;
+            width: 100%;
+            height: 100vh;
+            background-color: #f3f3f3;
+        }
+        .container {
+            border: 20px solid tan;
+            width: 750px;
+            height: 563px;
+            display: table-cell;
+            vertical-align: middle;
+            background-color: white;
+            margin: auto;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            color: tan;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .marquee {
+            color: tan;
+            font-size: 48px;
+            margin: 20px;
+        }
+        .assignment {
+            margin: 20px;
+        }
+        .person {
+            border-bottom: 2px solid black;
+            font-size: 32px;
+            font-style: italic;
+            margin: 20px auto;
+            width: 400px;
+        }
+        .reason {
+            margin: 20px;
+        }
+        .signatories {
+            margin: 40px 0 20px 0;
+            display: flex;
+            justify-content: space-around;
+        }
+        .signatory {
+            text-align: center;
+            font-size: 18px;
+        }
+        @media (min-width: 600px) {
+            .logo {
+                font-size: 28px;
+            }
+            .marquee {
+                font-size: 48px;
+            }
+            .assignment, .reason {
+                font-size: 24px;
+            }
+            .person {
+                font-size: 32px;
+            }
+            .signatory {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            Government College of Engineering Kalahandi
+        </div>
+
+        <div class="marquee">
+            Certificate of Membership
+        </div>
+
+        <div class="assignment">
+            This certificate is presented to
+        </div>
+
+        <div class="person">
+            {{ member.name }} of {{ member.year }} year {{ member.branch }}
+        </div>
+
+        <div class="reason">
+            For joining the Sakhyam Club
+        </div>
+
+        <div class="signatories">
+            <div class="signatory">
+                __________________________<br>
+                Ananta Nag<br>
+                Vice Captain, Sakhyam Club
+            </div>
+            <div class="signatory">
+                __________________________<br>
+                JivanJyoti Satapathy<br>
+                Captain, Sakhyam Club
+            </div>
+        </div>
+    </div>
+</body>
+</html>

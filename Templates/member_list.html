@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Team Section | code Info</title>
+    <link rel="stylesheet" href="{% static 'css/litan.css' %}">
+</head>
+<body>
+    <div class="faculty">
+        <img src="subedita.jpg" alt="Faculty Image">
+    </div>
+    <div class="wrapper">
+        <h2>Our Team</h2>
+        <hr>
+        {% for group_number, members in grouped_members.items %}
+            <div class="members{{ group_number }}">
+                <div class="team-mem{{ group_number }}">
+                    {% for member in members %}
+                        <div>
+                            <img src="{{ member.photo_url }}" alt="{{ member.name }}">
+                            <h4>{{ member.member }}</h4>
+                            <p>{{ member.role }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

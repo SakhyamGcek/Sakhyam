@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Dashboard</title>
+</head>
+<body>
+    <h2>Welcome, {{ user.name }}!</h2>
+    <p>Welcome to your dashboard.</p>
+    {% comment %} <ul>
+        <li><a href="{% url 'gallery_home' %}">View Gallery</a></li>
+        <li><a href="{% url 'upload_photo' %}">Upload Photo</a></li>
+        <li><a href="{% url 'create_category' %}">Create Category</a></li>
+    </ul> {% endcomment %}
+    <a href="{% url 'accounts:logout' %}">Logout</a>
+</body>
+</html>

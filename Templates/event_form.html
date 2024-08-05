@@ -1,0 +1,25 @@
+<!-- event_form.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Event</title>
+    {% comment %} <link rel="stylesheet" href="styles.css"> {% endcomment %}
+</head>
+<body>
+    <header>
+        <h1>Add Event</h1>
+    </header>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2024 Nukkad Drama Club. All rights reserved.</p>
+    </footer>
+</body>
+</html>

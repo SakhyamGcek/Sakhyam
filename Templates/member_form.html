@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JOIN US page </title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <link rel="stylesheet" href="{% static 'css\pratyush.css' %}">
+        <meta charset="UTF-8">
+</head>
+<body>
+    <div class="topic">
+        <h1>
+            <u>
+                CONNECT WITH US
+            </u>
+                
+        </h1>
+
+    </div>
+    
+    
+        
+        <div id="container">
+            <br>
+           
+                Welcome to Sakhyam! We're thrilled that you've chosen to reach out and connect with us. <br>
+             Whether you're here seeking information, or have questions, we're here to help.
+               Your connection with us is important, we look forward to building a meaningful & productive relationship with you. <br>
+                Thank you for reaching out, and we're excited to embark on this journey with you.
+        </div>
+        
+        
+            
+                <div id="box1">
+                    <h2>
+                        WANNA JOIN US!!
+                    </h2>
+                    <form method="post" action="{% url 'member:member_create' %}">
+                        {% csrf_token %}
+                        <div id ="input-row">
+                            <div id ="input-group">
+                                <label><b>Name</b></label>
+                                {{form.name}}
+                            </div>
+                            <div id ="input-group">
+                                <label><b>Phone no.</b></label>
+                                {{form.phone}}
+                            </div>
+                            <div id ="input-row 2">
+                                
+                                <div id="input-group">
+                                    <label><b>Branch</b></label>
+                                    {{ form.branch }}
+                                </div>
+                                <div id="input-group">
+                                    <label><b>Year</b></label>
+                                    {{ form.year }}
+                                </div>
+                                <div id="input-group">
+                                    <label><b>Bio</b></label>
+                                    {{ form.bio }}
+                                </div>
+                                <div id="input-group">
+                                    <label><b>Bio</b></label>
+                                    {{ form.email }}
+                                </div>
+                                
+                            
+
+                        </div>
+                        <button type="submit">SUBMIT</button>
+                       
+                    </form>
+    
+                </div>
+               
+
+                </div>
+                <div class="footer">
+                    <div class="socialicons">
+                        <a href="sakhyamgcek@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+                        <a href="https://www.instagram.com/sakhyam_nukkad_team_of_gcek?utm_source=qr&igsh=YjZ1cW9tZjlmajhq"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://youtube.com/@sakhyamgcek?si=tLiu7M25kNSUuCYX"><i class="fa-brands fa-youtube"></i></a>
+
+                    </div>
+                    <div class="logo">
+                        <img src="GCEK.jpg">
+
+                    </div>
+                    <div class="contacts">
+                        <p>
+                            Jivan jyoti Satapathy (Captain) - +918260548799 <br> 
+                            Anant Nag (Vice Captain) - +917735111244 
+                        </p>
+                    </div>
+                </div>
+                
+
+            
+    
+    
+</body>
+    
+</body>
+</html>
