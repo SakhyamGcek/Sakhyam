@@ -13,9 +13,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+DK+Uloopet&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Macondo&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+<header>
+    <div class="navbar">
         <div class="logo">
             <img src="{% static 'images\logo (1).png' %}" alt="Sakhyam Logo">
         </div>
@@ -32,8 +34,8 @@
                 <li><a href="{% url 'accounts:login' %}">Login</a></li>
             </ul>
         </nav>
+    </div>
     </header>
-    <div class="background"></div>
     <main>
         <div class="radiant-background">
         <section id="home" class="center-content">
@@ -69,8 +71,57 @@
                 </p>
         </section>
         <section id="about">
-            <h3>About Us</h3>
-            <p>Learn more about our mission and values.</p>
+            <h3 class="custom-font3">Founders</h3>
+            <div class="founder-underline"></div>
+            <div class="about-container">
+                <div class="about-text">
+                    <p class="justified-text2 custom-font2">
+                        Founded in 2019 by a group of passionate students from our college, Sakhyam Club has been dedicated to making a positive impact in our community. <br>
+                        Our founding members — Alam Kumar Nayak, Priyanka Senapati, Abhishek Pattnayak, and Tushar Setua — each brought their unique perspectives
+                        from the Mechanical and Electrical disciplines to create a club focused on raising awareness and inspiring action.</p>
+                </div>
+                </div>
+                </section>
+                <section id="Founderimage">
+                    <div class="founder-container">
+                        <div class="founder">
+                            <img src="https://github.com/SakhyamGcek/Photos/blob/main/abhishekbhai.jpg?raw=true" alt="Abhishek Pattnaik" class="founder-img">
+                            <p class="founder-name">Abhishek Pattnaik</p>
+                        </div>
+                        <div class="founder">
+                            <img src="https://github.com/SakhyamGcek/Photos/blob/main/Alam%20nayak.png?raw=true" alt="Alam Nayak" class="founder-img">
+                            <p class="founder-name">Alam Nayak</p>
+                        </div>
+                        <div class="founder">
+                            <img src="https://github.com/SakhyamGcek/Photos/blob/main/Ankita%20patel.png?raw=true" alt="Ankita Patel" class="founder-img">
+                            <p class="founder-name">Ankita Patel</p>
+                        </div>
+                        <div class="founder">
+                            <img src="https://github.com/SakhyamGcek/Photos/blob/main/Priyanka%20senapati.png?raw=true" alt="Priyanka Senapati" class="founder-img">
+                            <p class="founder-name">Priyanka Senapati</p>
+                        </div>
+                    </div>
+                </section>
+                <section id="vision">
+                    <p class="justified-text3 custom-font2 bold">
+                        <b>Our Vision </b></p>
+                        <div class="vision-underline"></div>
+                        <p class="left top custom-font2">At Sakhyam Club, we envision a world where individuals are not only aware of their rights but also understand the importance of supporting what is right. We believe that awareness is the first step towards meaningful change, and we strive to foster a society where people are empowered to make informed decisions and take positive actions.
+                    </p>
+                </section>
+                <section id="Mission">
+                <p class="justified-text4 custom-font2 bold"><b>Our Mission</b></p>
+                <div class="mission-underline"></div>
+                <p class="left top custom-font2">
+                Our mission is to spread awareness on crucial societal matters and encourage constructive dialogue and action. Through various initiatives, events, and programs, we aim to educate and engage our community, driving forward our vision of a more informed and proactive society. <br></p>
+        </section>
+        <section id="Quote">
+            <p class="sakhyam-text ">
+                SAKHYAM <br>
+                <img src="https://github.com/SakhyamGcek/Photos/blob/main/newlogo.png?raw=true" alt="New-Logo" class="new-logo">
+            </p>
+            
+            <p class="change-text ">BE THE CHANGE</p>
         </section>
     </div>
     </main>
