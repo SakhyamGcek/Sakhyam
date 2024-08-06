@@ -8,12 +8,123 @@
 </head>
 <body>
     <div class="faculty">
-        <img src="subedita.jpg" alt="Faculty Image">
+        <img src="https://github.com/SakhyamGcek/Photos/blob/main/HTML-20240806T134720Z-001/subedita.jpg?raw=true">
+        <h4>Dr.Subedita Pattnaik</h4>
+        <p>Faculty In Charge</p>
+
     </div>
     <div class="wrapper">
         <h2>Our Team</h2>
         <hr>
-        {% for group_number, members in grouped_members.items %}
+        <div class="members1">
+            <div class="team-mem1">
+                <div>
+                    <img src="https://github.com/SakhyamGcek/Photos/blob/main/HTML-20240806T134720Z-001/jivan.jpg?raw=true">
+                    <h4>Jivan Jyoti Satapathy</h4>
+                    <p>Captain/screenplay writter</p>
+                </div>
+                <div>
+                    <img src="https://github.com/SakhyamGcek/Photos/blob/main/HTML-20240806T134720Z-001/anant.jpg?raw=true">
+                    <h4>Ananta Nag</h4>
+                    <p>Vice captain/Screenplay writter</p>
+
+                </div>
+                <div>
+                    <img src="https://github.com/SakhyamGcek/Photos/blob/main/HTML-20240806T134720Z-001/debasish%20(1).jpg?raw=true">
+                    <h4>Debasish Sadangi</h4>
+                    <p>Treasurer/Screenplay writter</p>
+
+                </div>
+                <div>
+                    <img src="https://github.com/SakhyamGcek/Photos/blob/main/HTML-20240806T134720Z-001/swadhin.JPG?raw=true">
+                <h4>Swadhin Ranjan Patra</h4>
+                <p>Secretary/Screenplay writter</p>
+
+                </div>
+                
+             </div>
+            <div class="members2">
+                <div class="team-mem2">
+                    <div>
+                        <img src="https://github.com/SakhyamGcek/Photos/blob/main/HTML-20240806T134720Z-001/summit.jpg?raw=true">
+                        <h4>Sumit Gupta</h4>
+                        <p>Website developer/Member</p>
+                    </div>
+                    <div>
+                        <img src="https://github.com/SakhyamGcek/Photos/blob/main/HTML-20240806T134720Z-001/khushi.jpg?raw=true">
+                        <h4>Khushi Parimita</h4>
+                        <p>Website developer/Member</p>
+                    </div>
+                   <div>
+                    <img src="https://github.com/SakhyamGcek/Photos/blob/main/HTML-20240806T134720Z-001/Bobby.jpg?raw=true">
+                    <h4>Bobby Singh Bedi</h4>
+                    <p>Public Relation Officer</p>
+                   </div>
+                   <div>
+                    <img src="https://github.com/SakhyamGcek/Photos/blob/main/HTML-20240806T134720Z-001/harsh.jpg?raw=true">
+                    <h4>Harsh Wardhan</h4>
+                    <p>Website developer/Member</p>
+                   </div>
+                </div>
+                
+            </div>
+            <div class="members3">
+                <div class="team-mem3">
+                    <div>
+                        <img src="https://github.com/SakhyamGcek/Photos/blob/main/HTML-20240806T134720Z-001/ayush.jpg?raw=true">
+                        <h4>Ayush Patra</h4>
+                        <p>Member</p>
+                    </div>
+                    <div>
+                        <img src="https://github.com/SakhyamGcek/Photos/blob/main/HTML-20240806T134720Z-001/sona%20(1).jpg?raw=true">
+                        <h4>Sona Payoja Sahu</h4>
+                        <p>Member</p>
+                    </div>
+                   <div>
+                    <img src="https://github.com/SakhyamGcek/Photos/blob/main/HTML-20240806T134720Z-001/neha.jpg?raw=true">
+                    <h4>Neha Kumari Singh</h4>
+                    <p>Member</p>
+                   </div>
+                   <div>
+                    <img src="https://github.com/SakhyamGcek/Photos/blob/main/HTML-20240806T134720Z-001/avipsa.JPG?raw=true">
+                    <h4>Avipsa Priyadarshani Negi</h4>
+                    <p>Member</p>
+                   </div>
+                </div>
+                
+            </div>
+            <div class="members4">
+                <div class="team-mem4">
+                    <div>
+                        <img src="https://github.com/SakhyamGcek/Photos/blob/main/HTML-20240806T134720Z-001/Pratyush%20(1).jpg?raw=true">
+                        <h4>Pratyush Kumar Sethi</h4>
+                        <p>Website developer/Member</p>
+                    </div>
+                    <div>
+                        <img src="https://github.com/SakhyamGcek/Photos/blob/main/HTML-20240806T134720Z-001/subhram%20(1).jpg?raw=true">
+                        <h4>Subhram Nayak</h4>
+                        <p>Website developer/Member</p>
+                    </div>
+                   <div>
+                    <img src="https://github.com/SakhyamGcek/Photos/blob/main/HTML-20240806T134720Z-001/anaya%20(1).jpg?raw=true">
+                    <h4>Anaya Mund</h4>
+                    <p>Website developer/Member</p>
+                   </div>
+                   <div>
+                    <img src="https://github.com/SakhyamGcek/Photos/blob/main/HTML-20240806T134720Z-001/sudipta%20(1).jpg?raw=true">
+                    <h4>Sudipta Sugyan Sahu</h4>
+                    <p>Member</p>
+                   </div>
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
+     <div class="wrapper">
+        <h2>New Members of the Team</h2>
+        <hr>
+        {% for group_number, members in grouped_members.items %} 
             <div class="members{{ group_number }}">
                 <div class="team-mem{{ group_number }}">
                     {% for member in members %}
@@ -25,7 +136,7 @@
                     {% endfor %}
                 </div>
             </div>
-        {% endfor %}
-    </div>
+        {% endfor %} 
+    </div> 
 </body>
 </html>
