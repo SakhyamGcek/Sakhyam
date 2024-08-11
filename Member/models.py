@@ -8,7 +8,7 @@ class Member(models.Model):
     branch = models.CharField(max_length=15, blank=True, null=True)
     year = models.CharField(max_length=15, blank=True, null=True)
     #photo = models.ImageField(upload_to='members/', blank=True, null=True)
-    bio = models.TextField(blank=True, null=True)
+    #bio = models.TextField(blank=True, null=True)
     is_approved = models.BooleanField(default=False)
     approval_date = models.DateTimeField(blank=True, null=True)  # Add this field
 
